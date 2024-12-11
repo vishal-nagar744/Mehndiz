@@ -1,0 +1,307 @@
+@use "utils" as *;
+@use "global" as *;
+
+.form1 {
+  &.root {
+    position: relative;
+    width: 797px;
+    height: 624px;
+    min-height: 624px;
+    background: var(--src) center center / 100% 100% no-repeat;
+    outline-offset: -1px;
+    border-radius: 20px;
+    outline: rgb(221 226 229) solid 1px;
+  }
+
+  .info {
+    position: absolute;
+    inset: 37px auto auto 43px;
+    width: 153px;
+    height: 29px;
+    font: 400 24px/1.21 Inter, Helvetica, Arial, serif;
+    color: rgb(43 47 50);
+    letter-spacing: -0.4px;
+  }
+
+  .color {
+    position: absolute;
+    inset: 106px 420px 466px 43px;
+    width: 334px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+  }
+
+  .color1 {
+    position: absolute;
+    inset: 106px 420px 466px 43px;
+    width: 334px;
+    height: 52px;
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info1 {
+    position: absolute;
+    inset: 123px auto auto 59px;
+    width: 121px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color2 {
+    position: absolute;
+    inset: 182px 420px 390px 43px;
+    width: 334px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info11 {
+    position: absolute;
+    inset: 199px auto auto 59px;
+    width: 147px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color3 {
+    position: absolute;
+    inset: 258px 420px 314px 43px;
+    width: 334px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+  }
+
+  .color11 {
+    position: absolute;
+    inset: 258px 420px 314px 43px;
+    width: 334px;
+    height: 52px;
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info12 {
+    position: absolute;
+    inset: 275px auto auto 59px;
+    width: 39px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color4 {
+    position: absolute;
+    inset: 334px 420px 238px 43px;
+    width: 334px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+  }
+
+  .color12 {
+    position: absolute;
+    inset: 334px 420px 238px 43px;
+    width: 334px;
+    height: 52px;
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info13 {
+    position: absolute;
+    inset: 351px auto auto 59px;
+    width: 199px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .info2 {
+    position: absolute;
+    inset: 410px auto auto 47px;
+    width: 79px;
+    height: 15px;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: rgb(94 99 102);
+  }
+
+  .color21 {
+    position: absolute;
+    inset: 433px 420px 139px 43px;
+    width: 334px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info14 {
+    position: absolute;
+    inset: 450px auto auto 59px;
+    width: 99px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .image1 {
+    position: absolute;
+    inset: 447px 436px 153px 337px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .color31 {
+    position: absolute;
+    inset: 106px 43px 466px 421px;
+    width: 333px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+  }
+
+  .color41 {
+    position: absolute;
+    inset: 106px 43px 466px 421px;
+    width: 333px;
+    height: 52px;
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info15 {
+    position: absolute;
+    inset: 123px auto auto 437px;
+    width: 120px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color32 {
+    position: absolute;
+    inset: 182px 43px 390px 421px;
+    width: 333px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+  }
+
+  .color42 {
+    position: absolute;
+    inset: 182px 43px 390px 421px;
+    width: 333px;
+    height: 52px;
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info16 {
+    position: absolute;
+    inset: 199px auto auto 437px;
+    width: 118px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color5 {
+    position: absolute;
+    inset: 258px 43px 314px 421px;
+    width: 333px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info17 {
+    position: absolute;
+    inset: 275px auto auto 437px;
+    width: 96px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color51 {
+    position: absolute;
+    inset: 334px 43px 238px 421px;
+    width: 333px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info18 {
+    position: absolute;
+    inset: 351px auto auto 437px;
+    width: 111px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .info21 {
+    position: absolute;
+    inset: 410px auto auto 425px;
+    width: 79px;
+    height: 15px;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: rgb(94 99 102);
+  }
+
+  .color52 {
+    position: absolute;
+    inset: 433px 43px 139px 421px;
+    width: 333px;
+    height: 52px;
+    background-color: rgb(255 255 255);
+    outline-offset: -1px;
+    border-radius: 8px;
+    outline: rgb(207 211 212) solid 1px;
+  }
+
+  .info19 {
+    position: absolute;
+    inset: 450px auto auto 437px;
+    width: 43px;
+    height: 19px;
+    font: 400 16px/1.19 Inter, Helvetica, Arial, serif;
+    color: rgb(171 175 177);
+  }
+
+  .color6 {
+    position: absolute;
+    inset: 529px 308px 37px 309px;
+    width: 180px;
+    height: 58px;
+    background-color: rgb(59 93 80);
+    border-radius: 12px;
+  }
+
+  .info3 {
+    position: absolute;
+    inset: 546px auto auto 366px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 24px;
+    font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+  }
+}

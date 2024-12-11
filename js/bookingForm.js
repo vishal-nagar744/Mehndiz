@@ -45,7 +45,6 @@
 
 
 
-
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
@@ -71,38 +70,40 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     const specialRequests = document.getElementById('specialRequests').value;
 
     // Prepare the message text
-    let messageText = `**New Event Request**\n\n` +
+    let messageText = `
+*🌟 New Event Request 🌟*
 
-        `-----------------------------------------------------------------------------\n` +
-        `Basic Information\n\n` +
-        `First Name:-- ${firstName}\n` +
-        `Last Name:-- ${lastName}\n` +
-        `Email:-- ${email}\n` +
-        `Phone:-- ${phone}\n` +
-        `-----------------------------------------------------------------------------\n` +
+━━━━━━━━━━━━━━━━━━━━━
+*🔹 Basic Information*
+- *First Name:* ${firstName}
+- *Last Name:* ${lastName}
+- *Email:* ${email}
+- *Phone:* ${phone}
+━━━━━━━━━━━━━━━━━━━━━
 
-        `Event Details\n\n` +
-        `Event Type:-- ${eventType}\n` +
-        `Event Date:-- ${eventDate}\n` +
-        `Event Time:-- ${eventTime}\n` +
-        `Expected Duration:-- ${duration} hours \n` +
-        `-----------------------------------------------------------------------------\n` +
+*🔹 Event Details*
+- *Event Type:* ${eventType}
+- *Event Date:* ${eventDate}
+- *Event Time:* ${eventTime}
+- *Expected Duration:* ${duration} hours
+━━━━━━━━━━━━━━━━━━━━━
 
-        `Mehndi Details\n\n` +
-        `Mehndi Type:-- ${mehndiType}\n` +
-        `Number of Guests:-- ${guestCount}\n` +
-        `Design Preference:-- ${designPreference}\n` +
-        `-----------------------------------------------------------------------------\n` +
+*🔹 Mehndi Details*
+- *Mehndi Type:* ${mehndiType}
+- *Number of Guests:* ${guestCount}
+- *Design Preference:* ${designPreference}
+━━━━━━━━━━━━━━━━━━━━━
 
-        `Location Details\n\n` +
-        `Locality:-- ${locality}\n` +
-        `City:-- ${city}\n` +
-        `State:-- ${state}\n` +
-        `Pincode:-- ${pincode}\n` +
-        `-----------------------------------------------------------------------------\n` +
+*🔹 Location Details*
+- *Locality:* ${locality}
+- *City:* ${city}
+- *State:* ${state}
+- *Pincode:* ${pincode}
+━━━━━━━━━━━━━━━━━━━━━
 
-        `Additional Preferences\n\n` +
-        `Special Requests:-- ${specialRequests}\n`;
+*🔹 Additional Preferences*
+- *Special Requests:* ${specialRequests}
+`;
 
     // Handle file upload
     const fileInput = document.getElementById('upload-design');
@@ -115,6 +116,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         photoData.append('chat_id', chat_id);
         photoData.append('photo', file);
         photoData.append('caption', messageText); // Send message as caption
+        photoData.append('parse_mode', 'Markdown'); // Specify parse mode
 
         // Send the photo with caption
         fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
@@ -135,3 +137,4 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         alert("Please upload a design.");
     }
 });
+

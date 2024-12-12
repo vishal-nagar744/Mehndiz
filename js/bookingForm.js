@@ -1,9 +1,9 @@
 document
-	.getElementById('contactForm')
+	.getElementById('bookingForm')
 	.addEventListener('submit', function (event) {
 		event.preventDefault(); // Prevent default form submission
 
-		const chat_id = '1027678669'; // Replace with your chat ID
+		const chat_id = '-1002397872339'; // Replace with your chat ID
 		const token = '7764380795:AAH3g_HIpcxlyIcxAn2QT44vrlx9RJHXNw4'; // Replace with your bot token
 
 		// Gather form data

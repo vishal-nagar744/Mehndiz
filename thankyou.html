@@ -1,236 +1,130 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: HennaiX
-* Template Author: hennaix.com
-* Template URI: https://hennaix.com/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!doctype html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="hennaix.com">
-	<link rel="shortcut icon" href="favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="hennaix.com">
+    <link rel="shortcut icon" href="favicon.png">
 
-	<meta name="description" content="" />
-	<meta name="keywords" content="bootstrap, bootstrap4" />
+    <meta name="description" content="Thank you for choosing HennaiX. Your booking has been successfully completed." />
+    <meta name="keywords" content="thank you page, booking confirmation, henna designs, HennaiX" />
 
-	<!-- Bootstrap CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-	<link href="css/tiny-slider.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/message.css" rel="stylesheet">
-	<title>HennaiX </title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <title>Thank You - HennaiX</title>
+
+    <style>
+        /* Styling the Thank You Page */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 50px;
+            width: 90%;
+            max-width: 550px;
+            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border: 1px solid #000000;
+        }
+
+        .thankyou-icon {
+            font-size: 90px;
+            color: #3b5d50;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 34px;
+            color: #3b5d50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 15px 30px;
+            background-color: #f9bf29;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #eaaf1c;
+        }
+
+        @media (max-width: 768px) {
+            .popup-content {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Thank You Popup -->
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <div class="thankyou-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Thank You for Your Booking!</h2>
+            <p>Your booking with HennaiX has been successfully completed. Our team will reach out to you shortly to finalize the details. We are excited to bring exquisite mehndi artistry to your special event!</p>
+            <a href="index.html" class="btn">Return to Home </a>
+        </div>
+    </div>
 
-	<!-- Start Header/Navigation -->
-	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
-
-		<div class="container">
-			<a class="navbar-brand" href="index.html">HennaiX<span>.</span></a>
-
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarsFurni">
-				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-					<li class="nav-item ">
-						<a class="nav-link" href="index.html">Home</a>
-					</li>
-					<li><a class="nav-link" href="about.html">About us</a></li>
-					<li><a class="nav-link" href="services.html">Services</a></li>
-					<li><a class="nav-link" href="booking.html">Booking</a></li>
-					<!-- <li><a class="nav-link" href="blog.html">Blog</a></li> -->
-					<li><a class="nav-link" href="contact.html">Contact us</a></li>
-				</ul>
-
-				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-					<li><a class="nav-link" href="#"><img src="images/technical-support.svg"></a></li>
-					<!-- <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li> -->
-				</ul>
-			</div>
-		</div>
-
-	</nav>
-	<!-- End Header/Navigation -->
-
-	<!-- Start Hero Section -->
-	<div class="hero">
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-lg-5">
-					<div class="intro-excerpt">
-						<h1>Cart</h1>
-					</div>
-				</div>
-				<div class="col-lg-7">
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Hero Section -->
-
-
-
-	<div class="untree_co-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center pt-5">
-					<span class="display-3 thankyou-icon text-primary">
-						<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-check mb-5"
-							fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd"
-								d="M11.354 5.646a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708 0z" />
-							<path fill-rule="evenodd"
-								d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-						</svg>
-					</span>
-					<h2 class="display-3 text-black">Thank you!</h2>
-					<p class="lead mb-5">You order was successfuly completed.</p>
-					<p><a href="booking.html" class="btn btn-sm btn-outline-black">Back to booking</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- message section  -->
-	<div class="floating-msg" id="floatingMsg">
-		<div class="msg-logo" id="msgLogo"> <img src="images/message.svg">
-		</div>
-		<div class="msg-icons msg-img" id="msg-icons">
-			<a href="https://web.whatsapp.com/" target="_blank"><img src="images/Whatsapp.webp" alt="WhatsApp"></a>
-			<a href="tel:+91 7354682418"><img src="images/Phone.png" alt="Phone"></a>
-			<a href="https://t.me/+pEzBbFcM0GFjNzk1" target="_blank"><img src="images/Telegram.png" alt="Telegram"></a>
-		</div>
-	</div>
-	<!-- message section  -->
-
-	<!-- Start Footer Section -->
-	<footer class="footer-section">
-		<div class="container relative">
-
-			<div class="sofa-img">
-				<img src="images/design.png" alt="Image" class="img-fluid">
-			</div>
-
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="subscription-form">
-						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg"
-									alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
-
-						<form action="#" class="row g-3">
-							<div class="col-auto">
-								<input type="text" class="form-control" placeholder="Enter your name">
-							</div>
-							<div class="col-auto">
-								<input type="email" class="form-control" placeholder="Enter your email">
-							</div>
-							<div class="col-auto">
-								<button class="btn btn-primary">
-									<span class="fa fa-paper-plane"></span>
-								</button>
-							</div>
-						</form>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row g-5 mb-5">
-				<div class="col-lg-4">
-					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">HennaiX<span>.</span></a></div>
-					<p class="mb-4">We blend traditional artistry with modern creativity to craft unique mehndi designs
-						that add elegance, beauty, and charm to your special occasions, making every moment
-						unforgettable.</p>
-
-					<ul class="list-unstyled custom-social">
-						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-					</ul>
-				</div>
-
-				<div class="col-lg-8">
-					<div class="row links-wrap">
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Our Mehndi Services</a></li>
-								<li><a href="booking.html">Mehndi Design Portfolio</a></li>
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="contact.html">Customer Support</a></li>
-								<li><a href="#">FAQs</a></li>
-								<li><a href="#">Live Chat</a></li>
-							</ul>
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="#">Our Team</a></li>
-								<li><a href="#">Our Process</a></li>
-								<li><a href="#">Mehndi Techniques</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="booking.html">Henna Design Packages</a></li>
-								<li><a href="booking.html">Bridal Mehndi</a></li>
-								<li><a href="booking.html">Special Occasions Mehndi</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-
-
-			</div>
-
-			<div class="border-top copyright">
-				<div class="row pt-4">
-					<div class="col-lg-6">
-						<p class="mb-2 text-center text-lg-start">Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
-							Designed with love by <a href="">hennaix.com</a> Distributed By <a hreff="">HennaiX</a>
-							<!-- License information: https://hennaix.com/license/ -->
-						</p>
-					</div>
-
-					<div class="col-lg-6 text-center text-lg-end">
-						<ul class="list-unstyled d-inline-flex ms-auto">
-							<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-	</footer>
-	<!-- End Footer Section -->
-
-
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/tiny-slider.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/message.js"></script>
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

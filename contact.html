@@ -27,12 +27,12 @@
 	<title>HennaiX </title>
 	<style>
 		.error-message {
-	color: red;
-	font-size: 14px;
-	margin-top: 5px;
-	display: none; /* Hidden by default */
-}
-
+			color: red;
+			font-size: 14px;
+			margin-top: 5px;
+			display: none;
+			/* Hidden by default */
+		}
 	</style>
 </head>
 
@@ -43,8 +43,8 @@
 
 		<div class="container">
 			<a class="navbar-brand" href="index.html">
-					<img style="max-height: 60px; width: auto;" src="images/hennaixlogo.png" alt="Logo"  />
-				</a>
+				<img style="max-height: 60px; width: auto;" src="images/hennaixlogo.png" alt="Logo" />
+			</a>
 
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
 				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,10 +64,11 @@
 
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 					<li>
-						<a style="border: 2px solid white;" href="contact.html" class="btn btn-white-contact active">Contact Us</a>
+						<a style="border: 2px solid white;" href="contact.html"
+							class="btn btn-white-contact active">Contact Us</a>
 					</li>
 				</ul>
-				
+
 			</div>
 		</div>
 
@@ -189,24 +190,27 @@
 							</div>
 							<button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
 						</form>
-						
+
 						<!-- Thank You Message Section -->
 						<div class="thank-you-message" id="thankYouMessage">
 							<div class="tickdiv">
 								<i class="fas fa-check-circle tick"></i>
 							</div>
-							<h2>Thank You for Your Submission!</h2>
+							<h2>Thank You for Reaching Out to Us!</h2>
 							<p class="message-text">
-								We’ve received your event details and are excited to assist you with your request.
+								We sincerely appreciate your interest and the time you’ve taken to share your event
+								details with us. Our team is eager to assist you in creating a memorable experience.
 							</p>
 							<p class="message-text">
-								Our team will contact you shortly to confirm the details and address any specific needs you may have.
+								We are currently reviewing your request and will reach out to you soon to confirm the
+								details and ensure we meet your specific needs and expectations.
 							</p>
 							<p class="urgent-text">
-								If you have any urgent queries, feel free to reach out to us directly.
+								In case of any urgent queries or requests, don’t hesitate to contact us directly. We are
+								here to help!
 							</p>
 						</div>
-						
+
 
 					</div>
 
@@ -355,66 +359,66 @@
 	<script src="js/contactForm.js"></script>
 	<script>
 		document.getElementById("contactForm").addEventListener("submit", function (event) {
-	// Prevent form submission
-	event.preventDefault();
+			// Prevent form submission
+			event.preventDefault();
 
-	// Clear existing error messages
-	const errorMessages = document.querySelectorAll(".error-message");
-	errorMessages.forEach((message) => (message.style.display = "none"));
+			// Clear existing error messages
+			const errorMessages = document.querySelectorAll(".error-message");
+			errorMessages.forEach((message) => (message.style.display = "none"));
 
-	// Get form fields
-	const fname = document.getElementById("fname").value.trim();
-	const lname = document.getElementById("lname").value.trim();
-	const email = document.getElementById("email").value.trim();
-	const message = document.getElementById("message").value.trim();
+			// Get form fields
+			const fname = document.getElementById("fname").value.trim();
+			const lname = document.getElementById("lname").value.trim();
+			const email = document.getElementById("email").value.trim();
+			const message = document.getElementById("message").value.trim();
 
-	// Track if the form is valid
-	let isValid = true;
+			// Track if the form is valid
+			let isValid = true;
 
-	// Validate First Name
-	if (fname === "") {
-		const errorFname = document.getElementById("error-fname");
-		errorFname.textContent = "First name is required.";
-		errorFname.style.display = "block";
-		isValid = false;
-	}
+			// Validate First Name
+			if (fname === "") {
+				const errorFname = document.getElementById("error-fname");
+				errorFname.textContent = "First name is required.";
+				errorFname.style.display = "block";
+				isValid = false;
+			}
 
-	// Validate Last Name
-	if (lname === "") {
-		const errorLname = document.getElementById("error-lname");
-		errorLname.textContent = "Last name is required.";
-		errorLname.style.display = "block";
-		isValid = false;
-	}
+			// Validate Last Name
+			if (lname === "") {
+				const errorLname = document.getElementById("error-lname");
+				errorLname.textContent = "Last name is required.";
+				errorLname.style.display = "block";
+				isValid = false;
+			}
 
-	// Validate Email
-	if (email === "") {
-		const errorEmail = document.getElementById("error-email");
-		errorEmail.textContent = "Email address is required.";
-		errorEmail.style.display = "block";
-		isValid = false;
-	} else if (!/\S+@\S+\.\S+/.test(email)) {
-		const errorEmail = document.getElementById("error-email");
-		errorEmail.textContent = "Please enter a valid email address.";
-		errorEmail.style.display = "block";
-		isValid = false;
-	}
+			// Validate Email
+			if (email === "") {
+				const errorEmail = document.getElementById("error-email");
+				errorEmail.textContent = "Email address is required.";
+				errorEmail.style.display = "block";
+				isValid = false;
+			} else if (!/\S+@\S+\.\S+/.test(email)) {
+				const errorEmail = document.getElementById("error-email");
+				errorEmail.textContent = "Please enter a valid email address.";
+				errorEmail.style.display = "block";
+				isValid = false;
+			}
 
-	// Validate Message
-	if (message === "") {
-		const errorMessage = document.getElementById("error-message");
-		errorMessage.textContent = "Message is required.";
-		errorMessage.style.display = "block";
-		isValid = false;
-	}
+			// Validate Message
+			if (message === "") {
+				const errorMessage = document.getElementById("error-message");
+				errorMessage.textContent = "Message is required.";
+				errorMessage.style.display = "block";
+				isValid = false;
+			}
 
-	// If the form is valid, submit it
-	if (isValid) {
-		alert("Form submitted successfully!");
-		// Uncomment the next line if you want to actually submit the form
-		// this.submit();
-	}
-});
+			// If the form is valid, submit it
+			if (isValid) {
+				alert("Form submitted successfully!");
+				// Uncomment the next line if you want to actually submit the form
+				// this.submit();
+			}
+		});
 
 	</script>
 </body>

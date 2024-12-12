@@ -1,185 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="author" content="hennaix.com" />
+		<link rel="shortcut icon" href="favicon.png" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="hennaix.com">
-    <link rel="shortcut icon" href="favicon.png">
+		<meta name="description" content="" />
+		<meta name="keywords" content="bootstrap, bootstrap4" />
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="bootstrap, bootstrap4" />
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link href="css/tiny-slider.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/message.css" rel="stylesheet" />
+		<link href="css/bookingForm.css" rel="stylesheet" />
+		<title>HennaiX</title>
+	</head>
 
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="css/tiny-slider.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/message.css" rel="stylesheet">
-    <link href="css/bookingForm.css" rel="stylesheet">
-    <title>HennaiX </title>
-</head>
+	<body>
+		<!-- Start Header/Navigation -->
+		<nav
+			class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+			arial-label="Furni navigation bar"
+		>
+			<div class="container">
+				<a class="navbar-brand" href="index.html">HennaiX<span>.</span></a>
 
-<body>
-    <!-- Start Header/Navigation -->
-    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarsFurni"
+					aria-controls="navbarsFurni"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-        <div class="container">
-            <a class="navbar-brand" href="index.html">HennaiX<span>.</span></a>
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li><a class="nav-link" href="about.html">About us</a></li>
+						<li><a class="nav-link" href="services.html">Services</a></li>
+						<li><a class="nav-link" href="booking.html">Booking</a></li>
+						<!-- <li><a class="nav-link" href="blog.html">Blog</a></li> -->
+						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+					</ul>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<li>
+							<a class="nav-link" href="#"><img src="images/technical-support.svg" /></a>
+						</li>
+						<!-- <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- End Header/Navigation -->
 
-            <div class="collapse navbar-collapse" id="navbarsFurni">
-                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li><a class="nav-link" href="about.html">About us</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="booking.html">Booking</a></li>
-                    <!-- <li><a class="nav-link" href="blog.html">Blog</a></li> -->
-                    <li class="active"><a class="nav-link" href="contact.html">Contact us</a></li>
-                </ul>
+		<!-- Main Content Wrapper -->
+		<div class="main-content">
+			<div class="form-container">
+				<h1>Mehndi Booking Form</h1>
 
-                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                    <li><a class="nav-link" href="#"><img src="images/technical-support.svg"></a></li>
-                    <!-- <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li> -->
-                </ul>
-            </div>
-        </div>
+				<form id="contactForm">
+					<!-- Section 1: Basic Information -->
+					<div class="form-section">
+						<h3>Basic Information</h3>
+						<div class="form-grid">
+							<input type="text" id="firstName" name="firstName" placeholder="Your First Name" required />
+							<input type="text" id="lastName" name="lastname" placeholder="Your Last Name" required />
+							<input type="email" id="email" name="email" placeholder="Your Email Address" required />
+							<input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+						</div>
+					</div>
 
-    </nav>
-    <!-- End Header/Navigation -->
+					<!-- Section 2: Event Details -->
+					<div class="form-section">
+						<h3>Event Details</h3>
+						<div class="form-grid">
+							<select id="eventType" name="eventType" required>
+								<option value="">Event Type</option>
+								<option value="Wedding">Wedding</option>
+								<option value="Party">Party</option>
+								<option value="Festival">Festival</option>
+								<option value="Bridal">Bridal</option>
+							</select>
+							<input type="date" id="eventDate" name="eventDate" required />
+							<input type="time" id="eventTime" name="eventTime" required />
+							<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
+						</div>
+					</div>
 
-    <!-- Main Content Wrapper -->
-    <div class="main-content">
-        <div class="form-container">
-            <h1>Mehndi Booking Form</h1>
+					<!-- Section 3: Mehndi Preferences -->
+					<div class="form-section">
+						<h3>Mehndi Preferences</h3>
+						<div class="form-grid">
+							<select id="mehndiType" name="mehndiType" required>
+								<option value="">Mehndi Type</option>
+								<option value="Bridal">Bridal</option>
+								<option value="Party">Party</option>
+								<option value="Festive">Festive</option>
+							</select>
+							<input type="number" placeholder="Number of Guests" id="guestCount" name="guestCount" required />
+							<select id="designPreference" name="designPreference" required>
+								<option value="">Design Preference</option>
+								<option value="Traditional">Traditional</option>
+								<option value="Modern">Modern</option>
+								<option value="Custom">Custom</option>
+							</select>
+							<div class="file-upload">
+								<input type="file" id="upload-design" name="upload-design" required />
+								<label for="upload-design" id="file-label">Upload Your Preferred Design</label>
+							</div>
+						</div>
+					</div>
 
-            <form id="contactForm">
-                <!-- Section 1: Basic Information -->
-                <div class="form-section">
-                    <h3>Basic Information</h3>
-                    <div class="form-grid">
-                        <input type="text" id="firstName" name="firstName" placeholder="Your First Name" required>
-                        <input type="text" id="lastName" name="lastname" placeholder="Your Last Name" required>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-                    </div>
-                </div>
+					<!-- Section 4: Address Details -->
+					<div class="form-section">
+						<h3>Location Details</h3>
+						<div class="form-grid">
+							<input type="text" placeholder="Street/Locality" id="locality" name="locality" required />
+							<input type="text" placeholder="City or Town" id="city" name="city" required />
+							<select id="state" name="state" required>
+								<option value="">Select State</option>
+								<option value="Andhra Pradesh">Andhra Pradesh</option>
+								<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+								<option value="Assam">Assam</option>
+								<option value="Bihar">Bihar</option>
+								<option value="Chhattisgarh">Chhattisgarh</option>
+								<option value="Gujarat">Gujarat</option>
+								<option value="Haryana">Haryana</option>
+								<option value="Himachal Pradesh">Himachal Pradesh</option>
+								<option value="Jharkhand">Jharkhand</option>
+								<option value="Karnataka">Karnataka</option>
+								<option value="Kerala">Kerala</option>
+								<option value="Madhya Pradesh">Madhya Pradesh</option>
+								<option value="Maharashtra">Maharashtra</option>
+								<option value="Punjab">Punjab</option>
+								<option value="Rajasthan">Rajasthan</option>
+								<option value="Tamil Nadu">Tamil Nadu</option>
+								<option value="Uttar Pradesh">Uttar Pradesh</option>
+								<option value="West Bengal">West Bengal</option>
+							</select>
+							<input type="text" placeholder="Pincode" id="pincode" name="pincode" required />
+						</div>
+					</div>
 
-                <!-- Section 2: Event Details -->
-                <div class="form-section">
-                    <h3>Event Details</h3>
-                    <div class="form-grid">
-                        <select id="eventType" name="eventType" required>
-                            <option value="">Event Type</option>
-                            <option value="Wedding">Wedding</option>
-                            <option value="Party">Party</option>
-                            <option value="Festival">Festival</option>
-                            <option value="Bridal">Bridal</option>
-                        </select>
-                        <input type="date" id="eventDate" name="eventDate" required>
-                        <input type="time" id="eventTime" name="eventTime" required>
-                        <input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)">
-                    </div>
-                </div>
+					<!-- Section 5: Additional Details -->
+					<div class="form-section">
+						<h3>Additional Details</h3>
+						<div class="form-grid2">
+							<textarea id="specialRequests" placeholder="Any Special Requests or Instructions..."></textarea>
+						</div>
+					</div>
 
-                <!-- Section 3: Mehndi Preferences -->
-                <div class="form-section">
-                    <h3>Mehndi Preferences</h3>
-                    <div class="form-grid">
-                        <select id="mehndiType" name="mehndiType" required>
-                            <option value="">Mehndi Type</option>
-                            <option value="Bridal">Bridal</option>
-                            <option value="Party">Party</option>
-                            <option value="Festive">Festive</option>
-                        </select>
-                        <input type="number" placeholder="Number of Guests" id="guestCount" name="guestCount" required>
-                        <select id="designPreference" name="designPreference" required>
-                            <option value="">Design Preference</option>
-                            <option value="Traditional">Traditional</option>
-                            <option value="Modern">Modern</option>
-                            <option value="Custom">Custom</option>
-                        </select>
-                        <div class="file-upload">
-                            <input type="file" id="upload-design" name="upload-design" required>
-                            <label for="upload-design" id="file-label">Upload Your Preferred Design</label>
-                        </div>
+					<!-- Submit Button -->
+					<button type="submit" class="submit-btn">Submit</button>
+				</form>
+			</div>
+		</div>
+		<!-- End Main Content Wrapper -->
 
-
-                    </div>
-                </div>
-
-                <!-- Section 4: Address Details -->
-                <div class="form-section">
-                    <h3>Location Details</h3>
-                    <div class="form-grid">
-                        <input type="text" placeholder="Street/Locality" id="locality" name="locality" required>
-                        <input type="text" placeholder="City or Town" id="city" name="city" required>
-                        <select id="state" name="state" required>
-                            <option value="">Select State</option>
-                            <option value="Andhra Pradesh">Andhra Pradesh</option>
-                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                            <option value="Assam">Assam</option>
-                            <option value="Bihar">Bihar</option>
-                            <option value="Chhattisgarh">Chhattisgarh</option>
-                            <option value="Gujarat">Gujarat</option>
-                            <option value="Haryana">Haryana</option>
-                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                            <option value="Jharkhand">Jharkhand</option>
-                            <option value="Karnataka">Karnataka</option>
-                            <option value="Kerala">Kerala</option>
-                            <option value="Madhya Pradesh">Madhya Pradesh</option>
-                            <option value="Maharashtra">Maharashtra</option>
-                            <option value="Punjab">Punjab</option>
-                            <option value="Rajasthan">Rajasthan</option>
-                            <option value="Tamil Nadu">Tamil Nadu</option>
-                            <option value="Uttar Pradesh">Uttar Pradesh</option>
-                            <option value="West Bengal">West Bengal</option>
-                        </select>
-                        <input type="text" placeholder="Pincode" id="pincode" name="pincode" required>
-                    </div>
-                </div>
-
-                <!-- Section 5: Additional Details -->
-                <div class="form-section">
-                    <h3>Additional Details</h3>
-                    <div class="form-grid2">
-                        <textarea id="specialRequests" placeholder="Any Special Requests or Instructions..."></textarea>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-
-
-    </div>
-    <!-- End Main Content Wrapper -->
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/message.js"></script>
-    <script>
-        document.getElementById('upload-design').addEventListener('change', function () {
-            const fileLabel = document.getElementById('file-label');
-            if (this.files.length > 0) {
-                const fileName = this.files[0].name;
-                fileLabel.textContent = fileName; // Display the file name
-                fileLabel.classList.add('uploaded'); // Add the "uploaded" class to change style
-            } else {
-                fileLabel.textContent = 'Upload Your Preferred Design';
-                fileLabel.classList.remove('uploaded'); // Remove the "uploaded" class if no file
-            }
-        });
-    </script>
-    <script src="js/bookingForm.js"></script>
-</body>
-
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/message.js"></script>
+		<script>
+			document.getElementById('upload-design').addEventListener('change', function () {
+				const fileLabel = document.getElementById('file-label');
+				if (this.files.length > 0) {
+					const fileName = this.files[0].name;
+					fileLabel.textContent = fileName; // Display the file name
+					fileLabel.classList.add('uploaded'); // Add the "uploaded" class to change style
+				} else {
+					fileLabel.textContent = 'Upload Your Preferred Design';
+					fileLabel.classList.remove('uploaded'); // Remove the "uploaded" class if no file
+				}
+			});
+		</script>
+		<script src="js/bookingForm.js"></script>
+	</body>
 </html>

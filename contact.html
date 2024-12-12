@@ -23,7 +23,17 @@
 	<link href="css/tiny-slider.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/message.css" rel="stylesheet">
+	<link href="css/bookingForm.css" rel="stylesheet" />
 	<title>HennaiX </title>
+	<style>
+		.error-message {
+	color: red;
+	font-size: 14px;
+	margin-top: 5px;
+	display: none; /* Hidden by default */
+}
+
+	</style>
 </head>
 
 <body>
@@ -156,27 +166,47 @@
 									<div class="form-group">
 										<label class="text-black" for="fname">First name</label>
 										<input type="text" class="form-control" id="fname">
+										<span class="error-message" id="error-fname"></span>
 									</div>
 								</div>
 								<div class="col-6">
 									<div class="form-group">
 										<label class="text-black" for="lname">Last name</label>
 										<input type="text" class="form-control" id="lname">
+										<span class="error-message" id="error-lname"></span>
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="text-black" for="email">Email address</label>
 								<input type="email" class="form-control" id="email">
+								<span class="error-message" id="error-email"></span>
 							</div>
-
 							<div class="form-group mb-5">
 								<label class="text-black" for="message">Message</label>
-								<textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+								<textarea class="form-control" id="message" cols="30" rows="5"></textarea>
+								<span class="error-message" id="error-message"></span>
 							</div>
-
 							<button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
 						</form>
+						
+						<!-- Thank You Message Section -->
+						<div class="thank-you-message" id="thankYouMessage">
+							<div class="tickdiv">
+								<i class="fas fa-check-circle tick"></i>
+							</div>
+							<h2>Thank You for Your Submission!</h2>
+							<p class="message-text">
+								We’ve received your event details and are excited to assist you with your request.
+							</p>
+							<p class="message-text">
+								Our team will contact you shortly to confirm the details and address any specific needs you may have.
+							</p>
+							<p class="urgent-text">
+								If you have any urgent queries, feel free to reach out to us directly.
+							</p>
+						</div>
+						
 
 					</div>
 
@@ -323,6 +353,70 @@
 	<script src="js/custom.js"></script>
 	<script src="js/message.js"></script>
 	<script src="js/contactForm.js"></script>
+	<script>
+		document.getElementById("contactForm").addEventListener("submit", function (event) {
+	// Prevent form submission
+	event.preventDefault();
+
+	// Clear existing error messages
+	const errorMessages = document.querySelectorAll(".error-message");
+	errorMessages.forEach((message) => (message.style.display = "none"));
+
+	// Get form fields
+	const fname = document.getElementById("fname").value.trim();
+	const lname = document.getElementById("lname").value.trim();
+	const email = document.getElementById("email").value.trim();
+	const message = document.getElementById("message").value.trim();
+
+	// Track if the form is valid
+	let isValid = true;
+
+	// Validate First Name
+	if (fname === "") {
+		const errorFname = document.getElementById("error-fname");
+		errorFname.textContent = "First name is required.";
+		errorFname.style.display = "block";
+		isValid = false;
+	}
+
+	// Validate Last Name
+	if (lname === "") {
+		const errorLname = document.getElementById("error-lname");
+		errorLname.textContent = "Last name is required.";
+		errorLname.style.display = "block";
+		isValid = false;
+	}
+
+	// Validate Email
+	if (email === "") {
+		const errorEmail = document.getElementById("error-email");
+		errorEmail.textContent = "Email address is required.";
+		errorEmail.style.display = "block";
+		isValid = false;
+	} else if (!/\S+@\S+\.\S+/.test(email)) {
+		const errorEmail = document.getElementById("error-email");
+		errorEmail.textContent = "Please enter a valid email address.";
+		errorEmail.style.display = "block";
+		isValid = false;
+	}
+
+	// Validate Message
+	if (message === "") {
+		const errorMessage = document.getElementById("error-message");
+		errorMessage.textContent = "Message is required.";
+		errorMessage.style.display = "block";
+		isValid = false;
+	}
+
+	// If the form is valid, submit it
+	if (isValid) {
+		alert("Form submitted successfully!");
+		// Uncomment the next line if you want to actually submit the form
+		// this.submit();
+	}
+});
+
+	</script>
 </body>
 
 </html>

@@ -8,10 +8,11 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     const firstName = document.getElementById('fname').value.trim();
     const lastName = document.getElementById('lname').value.trim();
     const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
     const message = document.getElementById('message').value.trim();
 
     // Validation: Check if any field is empty
-    if (!firstName || !lastName || !email || !message) {
+    if (!firstName || !lastName || !email || !phone || !message) {
         alert('Please fill in all fields before submitting the form.');
         return; // Stop further execution
     }
@@ -29,6 +30,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 - *First Name:* ${firstName}
 - *Last Name:* ${lastName}
 - *Email:* ${email}
+- *Phone No:* ${phone}
 - *Message:* ${message}
 `;
 

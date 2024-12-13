@@ -14,7 +14,7 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%) scale(0.5); /* Initial smaller size */
+	transform: translate(-50%, -50%) scale(0.32); /* Initial smaller size */
 	background: linear-gradient(to right, #ffffff 0%, #e9e9e9 100%);
 	color: #4b4b4b;
 	padding: 5px;
@@ -23,6 +23,13 @@
 	text-align: center;
 	transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth zoom-in and fade-in */
 	animation: fadeOut 0.5s;
+}
+
+@media screen and (min-width: 450px) {
+	.popup {
+		transform: translate(-50%, -50%) scale(0.5);
+	}
+	
 }
 
 .popup-header {

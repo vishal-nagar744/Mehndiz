@@ -17,9 +17,12 @@
 	<link href="css/style.css" rel="stylesheet" />
 	<link href="css/message.css" rel="stylesheet" />
 	<link href="css/bookingForm.css" rel="stylesheet" />
+
+
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	
 	<title>HennaiX</title>
 </head>
 
@@ -89,8 +92,11 @@
 							<option value="Festival">Festival</option>
 							<option value="Bridal">Bridal</option>
 						</select>
-						<input type="date" id="eventDate" name="eventDate" required />
-						<input type="time" id="eventTime" name="eventTime" required />
+						<input type="text" id="eventDate" placeholder="YYYY-MM-DD" required onfocus="this.type='date'" onblur="if(this.value==''){this.type='text'}"/>
+    
+						<!-- Time Input -->
+						<input type="text" id="eventTime" placeholder="HH:MM" required onfocus="this.type='time'" onblur="if(this.value==''){this.type='text'}"/>
+					
 						<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
 					</div>
 				</div>
@@ -321,19 +327,7 @@
         $(function() {
             // Datepicker
             $("#eventDate").datepicker({
-                dateFormat: 'yy-mm-dd' // Format ko aap apne hisaab se change kar sakte hain
-            });
-
-            // Timepicker (jQuery UI mein nahi hai, isliye ek simple time input use karenge)
-            $("#eventTime").timepicker({
-                timeFormat: 'HH:mm', // 24-hour format
-                interval: 30, // 30 minutes ka interval
-                minTime: '0',
-                maxTime: '23:59',
-                startTime: '0:00',
-                dynamic: false,
-                dropdown: true,
-                scrollbar: true
+                dateFormat: 'yy-mm-dd'
             });
         });
     </script>

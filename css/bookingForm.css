@@ -162,6 +162,13 @@ textarea:focus {
 
 
 
+@media screen and (max-width: 450px) {
+    .file-upload label {
+      width: 284px;
+    }
+    
+}
+
 
 /* Media Query for Mobile Responsiveness */
 @media screen and (max-width: 768px) {

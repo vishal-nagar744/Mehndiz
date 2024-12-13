@@ -95,7 +95,8 @@
 
 						<!-- Time Input with System Default Time Picker -->
 						<input type="text" id="eventTime" placeholder="Select Time" required 
-						onfocus="this.type='time'" onblur="if(this.value==''){this.type='text'}"/>
+						onfocus="this.type='time'; this.placeholder=''" 
+						onblur="if(this.value==''){this.type='text'; this.placeholder='Select Time'}"/>
 						<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
 					</div>
 				</div>

@@ -211,6 +211,36 @@ select#state option[value=""]:checked {
 
 
 
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+input::placeholder {
+    color: #999; /* Placeholder text color */
+    font-style: italic;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #3b5d50; /* Your theme color for focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(59, 93, 80, 0.5); /* Slight glow effect */
+}
+
+
+
 
 /* General Styles for Thank You Message */
 .thank-you-message {

@@ -307,6 +307,19 @@ a.more {
 }
 
 
+/* Hero Logo  */
+.logo-img {
+  max-height: 50px;
+  width: auto;
+}
+
+@media (min-width: 450) {
+  .logo-img {
+    min-height: 60px;
+  }
+}
+
+
 
 .btn {
   font-weight: 600;

@@ -61,6 +61,8 @@
 		<div class="form-container">
 			<h1 id="head1">Event Booking Form</h1>
 
+
+			<!-- form Start -->
 			<form id="contactForm">
 				<!-- Section 1: Basic Information -->
 				<div class="form-section">
@@ -109,7 +111,7 @@
 							<option value="Custom">Custom</option>
 						</select>
 						<div class="file-upload">
-							<input type="file" id="upload-design" name="upload-design" required />
+							<input type="file" id="upload-design" name="upload-design" />
 							<label for="upload-design" id="file-label">Upload Preferred Design</label>
 						</div>
 					</div>
@@ -157,6 +159,10 @@
 				<!-- Submit Button -->
 				<button type="submit" class="submit-btn">Submit</button>
 			</form>
+			<!-- form end  -->
+
+
+
 			<!-- Booking Confirmation Message -->
 			<div class="thank-you-message" id="thankYouMessage">
 				<div class="tickdiv">
@@ -311,20 +317,8 @@
 	<script src="js/tiny-slider.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/message.js"></script>
-	<script>
-		document.getElementById('upload-design').addEventListener('change', function () {
-			const fileLabel = document.getElementById('file-label');
-			if (this.files.length > 0) {
-				const fileName = this.files[0].name;
-				fileLabel.textContent = fileName; // Display the file name
-				fileLabel.classList.add('uploaded'); // Add the "uploaded" class to change style
-			} else {
-				fileLabel.textContent = 'Upload Your Preferred Design';
-				fileLabel.classList.remove('uploaded'); // Remove the "uploaded" class if no file
-			}
-		});
-	</script>
 	<script src="js/bookingForm.js"></script>
+	<script src="js/bookingValidation.js"></script>
 </body>
 
 </html>

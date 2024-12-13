@@ -89,9 +89,10 @@ textarea {
 
 .form-grid input:focus,
 .form-grid select:focus,
-    textarea:focus {
+textarea:focus {
     border-color: #3498db;
 }
+
 
 
 /* Submit Button */
@@ -116,7 +117,6 @@ textarea {
 
 
 
-/* Custom File Upload Button */
 .file-upload {
     display: inline-block;
     position: relative;
@@ -128,9 +128,7 @@ textarea {
     /* Hide the default file input */
 }
 
-.file-upload label,
-input[type="date"],
-input[type="time"]  {
+.file-upload label {
     overflow: hidden;
     height: 40px;
     width: 194px;
@@ -144,7 +142,6 @@ input[type="time"]  {
     transition: all 0.3s ease;
     display: inline-block;
     min-width: 120px;
-    /* Set minimum width for consistent sizing */
     text-align: center;
 }
 
@@ -155,6 +152,11 @@ input[type="time"]  {
 .file-upload label.uploaded {
     border: 1px solid #f9bf29;
     color: #0e5634;
+}
+
+.file-upload label.error {
+    border: 1px solid red;
+    color: red;
 }
 
 
@@ -232,50 +234,53 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* General Styles for Thank You Message */
 .thank-you-message {
     display: none;
-	text-align: center;
-	margin-top: 50px;
-	font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Icon Styling */
 .tickdiv {
-	font-size: 120px;
-	color: #3b5d50; /* Green Success Color */
-	margin-bottom: 80px;
+    font-size: 120px;
+    color: #3b5d50;
+    /* Green Success Color */
+    margin-bottom: 80px;
 }
 
 /* Header Styling */
 .thank-you-message h2 {
-	color: #333;
-	font-size: 30px;
-	margin-bottom: 15px;
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
 /* Paragraph Text Styling */
 .thank-you-message .message-text {
-	color: #555;
-	font-size: 18px;
-	line-height: 1.5;
-	margin: 15px 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 15px 0;
 }
 
 /* Urgent Text Styling */
 .thank-you-message .urgent-text {
-	color: #555;
-	font-size: 16px;
-	margin-top: 20px;
+    color: #555;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 /* Responsive Design (Optional) */
 @media (max-width: 768px) {
-	.thank-you-message h2 {
-		font-size: 24px;
-	}
-	.thank-you-message .message-text,
-	.thank-you-message .urgent-text {
-		font-size: 16px;
-	}
-	.thank-you-message .tick {
-		font-size: 60px;
-	}
+    .thank-you-message h2 {
+        font-size: 24px;
+    }
+
+    .thank-you-message .message-text,
+    .thank-you-message .urgent-text {
+        font-size: 16px;
+    }
+
+    .thank-you-message .tick {
+        font-size: 60px;
+    }
 }

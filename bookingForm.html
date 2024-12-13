@@ -22,6 +22,14 @@
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
 	
 	<title>HennaiX</title>
 </head>
@@ -92,11 +100,8 @@
 							<option value="Festival">Festival</option>
 							<option value="Bridal">Bridal</option>
 						</select>
-						<input type="text" id="eventDate" placeholder="YYYY-MM-DD" required onfocus="this.type='date'" onblur="if(this.value==''){this.type='text'}"/>
-    
-						<!-- Time Input -->
-						<input type="text" id="eventTime" placeholder="HH:MM" required onfocus="this.type='time'" onblur="if(this.value==''){this.type='text'}"/>
-					
+						<input type="text" id="eventDate" placeholder="YYYY-MM-DD" required />
+<input type="text" id="eventTime" placeholder="HH:MM" required />
 						<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
 					</div>
 				</div>
@@ -324,13 +329,25 @@
 
 
 	<script>
-        $(function() {
-            // Datepicker
-            $("#eventDate").datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-        });
-    </script>
+		$(function() {
+			// Datepicker
+			$("#eventDate").datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+	
+			// Timepicker
+			$("#eventTime").timepicker({
+				timeFormat: 'HH:mm',
+				interval: 30,
+				minTime: '0',
+				maxTime: '23:59',
+				startTime: '0:00',
+				dynamic: false,
+				dropdown: true,
+				scrollbar: true
+			});
+		});
+	</script>
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>

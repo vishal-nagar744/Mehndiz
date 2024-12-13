@@ -180,7 +180,7 @@ a.more {
 
 .hero p {
   color: rgba(255, 255, 255, 0.5);
-  margin-botom: 30px;
+  margin-bottom: 30px;
 }
 
 .hero .hero-img-wrap {
@@ -189,54 +189,80 @@ a.more {
 
 .hero .hero-img-wrap img {
   position: relative;
-  top: 0px;
-  right: 0px;
+  top: 5.6rem;
   z-index: 2;
-  max-width: 780px;
-  left: -20px;
+  max-width: 80%;
+  /* left: -20px; */
 }
 
 @media (min-width: 768px) {
   .hero .hero-img-wrap img {
-    right: 0px;
-    left: -100px;
+    right: -9.2rem;
+    top: 5.6rem;
   }
 }
 
 @media (min-width: 992px) {
   .hero .hero-img-wrap img {
-    left: 0px;
-    top: -80px;
+    /* left: 0px; */
+    top: 5rem;
     position: absolute;
-    right: -50px;
+    right: -1rem;
   }
 }
 
 @media (min-width: 1200px) {
   .hero .hero-img-wrap img {
-    left: 0px;
-    top: -80px;
-    right: -100px;
+    top: 3rem;
+    right: -0.5rem;
+    /* right: -100px; */
   }
 }
 
 .hero .hero-img-wrap:after {
   content: "";
   position: absolute;
-  width: 255px;
-  height: 217px;
+  width: 200px;
+  height: 175px;
   background-image: url("../images/dots-light.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  right: -100px;
-  top: -0px;
+  right: 2px;
+  top: 20px;
+}
+
+
+@media (min-width: 452px) {
+  .hero .hero-img-wrap:after {
+    width: 255px;
+    height: 217px;
+    top: 8px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero .hero-img-wrap:after {
+    top: 8px;
+    right: -95px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero .hero-img-wrap:after {
+    top: -10px;
+    right: -98px;
+  }
 }
 
 @media (min-width: 1200px) {
   .hero .hero-img-wrap:after {
     top: -40px;
+    right: -100px;
   }
 }
+
+
 
 .btn {
   font-weight: 600;
@@ -297,16 +323,20 @@ a.more {
   background: transparent;
   border-width: 2px;
   border-color: rgba(255, 255, 255, 0.3);
-  padding: 9px 16px; /* Button ki size adjust karne ke liye */
-  font-size: 14px; /* Font ki size adjust karne ke liye */
-  border-radius: 35px; /* Button ke corners round karne ke liye */
+  padding: 9px 16px;
+  /* Button ki size adjust karne ke liye */
+  font-size: 14px;
+  /* Font ki size adjust karne ke liye */
+  border-radius: 35px;
+  /* Button ke corners round karne ke liye */
 }
 
 /* Hover effect, agar active class ho */
 .btn.btn-white-contact.active:hover {
   border-color: white;
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.1); /* Optional background for hover effect */
+  background: rgba(255, 255, 255, 0.1);
+  /* Optional background for hover effect */
 }
 
 

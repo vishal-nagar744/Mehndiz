@@ -18,9 +18,14 @@
 	<link href="css/message.css" rel="stylesheet" />
 	<link href="css/bookingForm.css" rel="stylesheet" />
 
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        /* Placeholder color for mobile */
+        input::placeholder {
+            color: #999; /* Placeholder color */
+        }
+    </style>
 	<title>HennaiX</title>
 </head>
 
@@ -94,7 +99,7 @@
 
 						<!-- Time Input with Placeholder -->
 						<input type="text" id="eventTime" placeholder="Select Time" required />
-						<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
+						<input type="text" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
 					</div>
 				</div>
 
@@ -339,6 +344,27 @@
                 allowInput: true,
                 onReady: function(selectedDates, dateStr, instance) {
                     instance.input.placeholder = "Select Time";
+                }
+            });
+
+            // Event listeners to manage placeholder visibility
+            const timeInput = document.getElementById("eventTime");
+            timeInput.addEventListener("focus", function() {
+                this.placeholder = ""; // Clear placeholder on focus
+            });
+            timeInput.addEventListener("blur", function() {
+                if (this.value === "") {
+                    this.placeholder = "Select Time"; // Reset placeholder if empty
+                }
+            });
+
+            const dateInput = document.getElementById("eventDate");
+            dateInput.addEventListener("focus", function() {
+                this.placeholder = ""; // Clear placeholder on focus
+            });
+            dateInput.addEventListener("blur", function() {
+                if (this.value === "") {
+                    this.placeholder = "Select Date"; // Reset placeholder if empty
                 }
             });
         });

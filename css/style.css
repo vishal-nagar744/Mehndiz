@@ -402,7 +402,14 @@ a.more {
 }
 
 .product-section {
-  padding: 7rem 0;
+  padding: 9rem 0rem 0rem 0;
+}
+
+@media screen and (min-width: 450px) {
+  .product-section {
+    padding: 7rem 0;
+  }
+  
 }
 
 .product-section .product-item {
@@ -498,7 +505,14 @@ a.more {
 }
 
 .why-choose-section {
-  padding: 7rem 0;
+  padding: 0rem 0rem 4rem 0;
+}
+
+@media (min-width: 450px) {
+  .why-choose-section {
+    padding: 7rem 0;
+  }
+  
 }
 
 .why-choose-section .img-wrap {
@@ -556,7 +570,14 @@ a.more {
 }
 
 .we-help-section {
-  padding: 7rem 0;
+  padding:7rem 0rem 3rem 0;
+}
+
+@media (min-width: 450px) {
+  .we-help-section {
+    padding: 7rem 0;
+  }
+  
 }
 
 .we-help-section .imgs-grid {
@@ -644,7 +665,7 @@ a.more {
 }
 
 .popular-product {
-  padding: 7rem 0;
+  padding: 1rem 0;
 }
 
 .popular-product .product-item-sm h3 {
@@ -695,7 +716,14 @@ a.more {
 }
 
 .testimonial-section {
-  padding: 3rem 0 7rem 0;
+  padding: 1rem 0 7rem 0;
+}
+
+@media screen and (min-width: 450px) {
+  .testimonial-section {
+    padding: 3rem 0 7rem 0;
+  }
+  
 }
 
 .testimonial-slider-wrap {
@@ -827,7 +855,7 @@ a.more {
 }
 
 .blog-section {
-  padding: 7rem 0 12rem 0;
+  padding: 2rem 0 12rem 0;
 }
 
 .blog-section .post-entry a {

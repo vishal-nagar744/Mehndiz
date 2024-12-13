@@ -402,12 +402,12 @@ a.more {
 }
 
 .product-section {
-  padding: 9rem 0rem 0rem 0;
+  padding: 7.5rem 0rem 0rem 0;
 }
 
 @media screen and (min-width: 450px) {
   .product-section {
-    padding: 7rem 0;
+    padding: 7rem 0rem 3rem 0;
   }
   
 }
@@ -510,9 +510,18 @@ a.more {
 
 @media (min-width: 450px) {
   .why-choose-section {
-    padding: 7rem 0;
+    padding: 7rem 0rem 2rem 0rem;
   }
-  
+}
+
+.why-choose-section-about {
+  padding: 7.5rem 0rem 4rem 0 !important;
+}
+
+@media (min-width: 450px) {
+  .why-choose-section-about {
+    padding: 7rem 0rem 2rem 0rem !important;
+  }
 }
 
 .why-choose-section .img-wrap {

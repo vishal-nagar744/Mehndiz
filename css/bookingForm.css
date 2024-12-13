@@ -210,35 +210,49 @@ select#state option[value=""]:checked {
 }
 
 
-
-.form-group {
-    margin-bottom: 15px;
+input[type=date],
+input[type=time] {
+    border            : none;
+    box-sizing        : border-box;
+    outline           : 0;
+    padding-left      : .75rem;
+    display           : flex;
+    justify-content   : center;
+    position          : relative;
+    width             : 100%;
+    -moz-appearance   : textfield;
+    -webkit-appearance: none;
+    margin            : 0;
 }
 
-input[type="date"],
-input[type="time"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #fff;
-    color: #333;
+input[type=date]::placeholder,
+input[type=time]::placeholder {
+    font-family: 'Roboto';
+    font-size  : 17px;
+    font-style : normal;
+    font-weight: 400;
 }
 
-input::placeholder {
-    color: #999; /* Placeholder text color */
-    font-style: italic;
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator {
+    background: none;
+    bottom    : 0;
+    color     : transparent;
+    cursor    : pointer;
+    height    : auto;
+    left      : 0;
+    position  : absolute;
+    right     : 0;
+    top       : 0;
+    width     : auto;
 }
 
-input[type="date"]:focus,
-input[type="time"]:focus {
-    border-color: #3b5d50; /* Your theme color for focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(59, 93, 80, 0.5); /* Slight glow effect */
-}
 
+input[type=date]::-webkit-datetime-edit,
+input[type=time]::-webkit-datetime-edit {
+    text-align: center;
+    width     : 100%;
+}
 
 
 

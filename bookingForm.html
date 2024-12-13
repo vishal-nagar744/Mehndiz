@@ -19,9 +19,8 @@
 	<link href="css/bookingForm.css" rel="stylesheet" />
 
 
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 	<title>HennaiX</title>
 </head>
 
@@ -93,10 +92,8 @@
 						</select>
 						<input type="text" id="eventDate" placeholder="Select Date" required />
 
-						<!-- Time Input with System Default Time Picker -->
-						<input type="text" id="eventTime" placeholder="Select Time" required 
-						onfocus="this.type='time'; this.placeholder=''" 
-						onblur="if(this.value==''){this.type='text'; this.placeholder='Select Time'}"/>
+						<!-- Time Input with Placeholder -->
+						<input type="text" id="eventTime" placeholder="Select Time" required />
 						<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
 					</div>
 				</div>
@@ -324,17 +321,28 @@
 
 
 	<script>
-		$(function () {
-			// Custom Datepicker
-			$("#eventDate").datepicker({
-				dateFormat: 'yy-mm-dd', // Format ko aap apne hisaab se change kar sakte hain
-				showAnim: "slideDown", // Calendar dikhane ka animation
-				changeMonth: true,
-				changeYear: true,
-			});
-		});
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Datepicker
+            flatpickr("#eventDate", {
+                dateFormat: "Y-m-d",
+                allowInput: true,
+                onReady: function(selectedDates, dateStr, instance) {
+                    instance.input.placeholder = "Select Date";
+                }
+            });
 
-	</script>
+            // Initialize Timepicker
+            flatpickr("#eventTime", {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                allowInput: true,
+                onReady: function(selectedDates, dateStr, instance) {
+                    instance.input.placeholder = "Select Time";
+                }
+            });
+        });
+    </script>
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>

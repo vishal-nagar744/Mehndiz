@@ -256,7 +256,7 @@ a.more {
 
 @media (min-width: 1400px) {
   .hero .hero-img-wrap .services-hero {
-    top: -3.9rem;
+    top: -4.4rem;
     right: -2.5rem;
     /* right: -100px; */
   }
@@ -523,6 +523,18 @@ a.more {
     padding: 7rem 0rem 2rem 0rem !important;
   }
 }
+
+
+.why-choose-section-services {
+  padding: 0rem !important;
+}
+
+@media (min-width: 450px) {
+  .why-choose-section-services {
+    padding: 4rem 0rem 2rem 0rem !important;
+  }
+}
+
 
 .why-choose-section .img-wrap {
   position: relative;
@@ -1172,4 +1184,19 @@ textarea {
   height: 50px;
   border-radius: 50%;
   background: rgba(59, 93, 80, 0.2);
+}
+
+
+
+
+
+
+.hero-heading{
+  font-size: calc(1.375rem + 1.5vw) !important;
+}
+
+@media (min-width: 450px) {
+  .hero-heading {
+    font-size: 37px !important;
+  }
 }

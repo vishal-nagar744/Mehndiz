@@ -210,11 +210,7 @@ select#state option[value=""]:checked {
 }
 
 
-input[type="date"] {
-    min-width:95.6%;
-    -webkit-appearance : none;
-    min-height: calc(var(--lwc-heightInput,1.875rem) + (1px * 2) + 24px) !important;
-}
+
 
 
 

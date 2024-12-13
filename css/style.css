@@ -689,6 +689,17 @@ a.more {
   padding: 1rem 0;
 }
 
+.popular-product-booking {
+  padding: 8rem 0 0 0;
+}
+
+@media screen and (min-width: 450px) {
+  .popular-product-booking {
+    padding: 6rem 0;
+  }
+  
+}
+
 .popular-product .product-item-sm h3 {
   font-size: 14px;
   font-weight: 700;

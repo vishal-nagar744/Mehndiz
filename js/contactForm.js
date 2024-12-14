@@ -1,6 +1,35 @@
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
+    // Configure Notyf
+    const notyf = new Notyf({
+        duration: 5000, // Set duration to 5 seconds
+        position: {
+            x: 'center', // Position notifications on the right
+            y: 'top', // Position notifications at the top
+        },
+        types: [
+            {
+                type: 'success',
+                background: '#3b5d50',
+                icon: {
+                    className: 'fas fa-check-circle', // Use FontAwesome for success icon
+                    tagName: 'i',
+                    text: '', // Text is not needed for icons
+                },
+            },
+            {
+                type: 'error',
+                background: 'red',
+                icon: {
+                    className: 'fas fa-exclamation-circle', // Use FontAwesome for error icon
+                    tagName: 'i',
+                    text: '', // Text is not needed for icons
+                },
+            },
+        ],
+    });
+
     const chat_id = '-1002397872339'; // Replace with your chat ID
     const token = '7764380795:AAH3g_HIpcxlyIcxAn2QT44vrlx9RJHXNw4'; // Replace with your bot token
 
@@ -13,7 +42,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
     // Validation: Check if any field is empty
     if (!firstName || !lastName || !email || !phone || !message) {
-        alert('Please fill in all fields before submitting the form.');
+        notyf.error('Please fill in all fields before submitting the form.');
         return; // Stop further execution
     }
 
@@ -52,9 +81,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             // Hide the form and show the Thank You message
             document.getElementById('contactForm').style.display = 'none';
             document.getElementById('thankYouMessage').style.display = 'block';
+            notyf.success('Message sent successfully!');
         } else {
-            alert('Error sending message.');
+            notyf.error('Error sending message.');
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        notyf.error('An error occurred while sending the message.');
+    });
 });

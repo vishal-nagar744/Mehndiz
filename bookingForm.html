@@ -22,6 +22,8 @@
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	    <!-- Other head elements -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 	<title>HennaiX</title>
 </head>
 
@@ -94,7 +96,7 @@
 						<input type="text" id="eventDate" placeholder="Select Date" required />
 
 						<!-- Time Input with System Default Time Picker -->
-						<input type="text" id="eventTime" placeholder="Select Time" required
+						<input type="text" id="eventTime" placeholder="Select Time" 
 							onclick="this.type='time'; this.placeholder=''"
 							onblur="if(this.value==''){this.type='text'; this.placeholder='Select Time'}" />
 						<input type="number" id="duration" name="duration" placeholder="Expected Duration (Hours)" />
@@ -342,6 +344,8 @@
 	<script src="js/message.js"></script>
 	<script src="js/bookingForm.js"></script>
 	<script src="js/bookingValidation.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="js/bookingForm.js"></script>
 </body>
 
 </html>

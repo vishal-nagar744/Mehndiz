@@ -25,6 +25,38 @@
 	<script src="js/popup.js"></script>
 	<link href="css/message.css" rel="stylesheet" />
 	<link href="css/popup.css" rel="stylesheet" />
+	<style>
+		.booking-button {
+			width: 220px;
+			height: 63px;
+			left: 464px;
+			top: 729px;
+			position: absolute;
+			background: #eefbf0;
+			border-radius: 31.5px;
+			text-decoration: none;
+		}
+
+		.booking-button:hover {
+			background-color: #b9b9b9;
+		}
+
+		.discount-button {
+			width: 220px;
+			height: 63px;
+			left: 773px;
+			top: 729px;
+			position: absolute;
+			background: #3b593d;
+			border-radius: 31.5px;
+			border: 2px #e2e4d4 solid;
+			text-decoration: none;
+		}
+
+		.discount-button:hover {
+			background: #2f4731;
+		}
+	</style>
 	<title>HennaiX</title>
 </head>
 
@@ -305,7 +337,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 mx-auto text-center">
-					<h2 class="section-title">Testimonials</h2>
+					<h2 class="section-title">Our Henna Events Reviews</h2>
 				</div>
 			</div>
 
@@ -324,12 +356,10 @@
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
 												<p>
-													&ldquo;Our clients’ words speak volumes about our commitment to
-													excellence. From intricate bridal mehndi to festive designs, their
-													experiences showcase our passion for delivering personalized
-													artistry that
-													adds charm and elegance to every occasion, creating unforgettable
-													memories through stunning mehndi creations.&rdquo;
+													&ldquo;I was so impressed with the bridal mehndi design! The intricate patterns 
+													and attention to detail made my wedding day even more special. I received so many 
+													compliments, and I couldn’t be happier with the results. Thank you for such an 
+													amazing experience!&rdquo;
 												</p>
 											</blockquote>
 
@@ -338,9 +368,8 @@
 													<img src="./images/testimonial1.jpg" alt="Saanjh Designs"
 														class="img-fluid" />
 												</div>
-												<h3 class="font-weight-bold">Saanjh Designs</h3>
-												<span class="position d-block mb-3">Lead Mehndi Artist, Henna
-													Creations</span>
+												<h3 class="font-weight-bold">Priya Sharma</h3>
+                                    <span class="position d-block mb-3">Bride</span>
 											</div>
 										</div>
 									</div>
@@ -354,12 +383,11 @@
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
 												<p>
-													&ldquo;Every testimonial is a reflection of our dedication to
-													crafting unique mehndi designs. Our clients celebrate their special
-													moments with confidence, knowing we bring tradition, creativity, and
-													precision to life. Their stories inspire us to continue enhancing
-													joyous occasions with beautiful, timeless mehndi artistry.&rdquo;
+													&ldquo;The festive mehndi design added so much charm to our Diwali celebrations. 
+													The designs were bold, beautiful, and perfectly suited for the occasion. 
+													The artist’s skill and professionalism were truly exceptional!&rdquo;
 												</p>
+	
 											</blockquote>
 
 											<div class="author-info">
@@ -367,9 +395,8 @@
 													<img src="./images/testimonial2.jpg" alt="Rivaaj Mehndi"
 														class="img-fluid" />
 												</div>
-												<h3 class="font-weight-bold">Rivaaj Mehndi</h3>
-												<span class="position d-block mb-3">Founder & Creative Director, Mehndi
-													Elegance</span>
+												<h3 class="font-weight-bold">Aarti Patel</h3>
+												<span class="position d-block mb-3">Festive Client</span>
 											</div>
 										</div>
 									</div>
@@ -383,12 +410,9 @@
 										<div class="testimonial-block text-center">
 											<blockquote class="mb-5">
 												<p>
-													&ldquo;Our testimonials highlight the trust and happiness of our
-													clients. They share their journey of celebrating milestones with
-													bespoke mehndi designs tailored to their desires. Their satisfaction
-													fuels
-													our mission to deliver excellence and artistry that resonates with
-													elegance and tradition in every design.&rdquo;
+													&ldquo;I requested a custom mehndi design, and it exceeded my expectations. 
+													The mix of traditional and modern patterns was exactly what I wanted. 
+													Everyone loved it, and I couldn’t stop admiring the artistry myself!&rdquo;
 												</p>
 											</blockquote>
 
@@ -397,9 +421,8 @@
 													<img src="./images/testimonial3jpg.jpg" alt="Heer Mehndi"
 														class="img-fluid" />
 												</div>
-												<h3 class="font-weight-bold">Heer Mehndi</h3>
-												<span class="position d-block mb-3">CEO & Founder, Bridal Mehndi
-													Artistry</span>
+												<h3 class="font-weight-bold">Neha Verma</h3>
+												<span class="position d-block mb-3">Happy Client</span>
 											</div>
 										</div>
 									</div>
@@ -479,8 +502,7 @@
 		<div class="msg-icons msg-img" id="msg-icons">
 			<a href="https://web.whatsapp.com/" target="_blank"><img src="images/Whatsapp.webp" alt="WhatsApp" /></a>
 			<a href="tel:+91 7354682418"><img src="images/Phone.png" alt="Phone" /></a>
-			<a href="https://web.telegram.org/a/" target="_blank"><img src="images/Telegram.png"
-					alt="Telegram" /></a>
+			<a href="https://web.telegram.org/a/" target="_blank"><img src="images/Telegram.png" alt="Telegram" /></a>
 		</div>
 	</div>
 	<!-- message section  -->
@@ -495,53 +517,39 @@
 			<div style="width: 1024px; height: 1024px; position: relative">
 				<img style="width: 1024px; height: 1024px; left: 0px; top: 0px; position: absolute"
 					src="images/Booking2.webp" />
-				<div style="
+				<a href="bookingForm.html" class="booking-button">
+					<div style="
 							width: 220px;
 							height: 63px;
-							left: 464px;
-							top: 729px;
-							position: absolute;
-							background: linear-gradient(360deg, #eefbf0 0%, white 100%);
-							border-radius: 31.5px;
-						"></div>
-				<div style="
-							width: 169px;
-							height: 61px;
-							left: 489px;
-							top: 745px;
-							position: absolute;
+							display: flex;
+							align-items: center;
+							justify-content: center;
 							text-align: center;
 							color: #142721;
 							font-size: 24px;
 							font-family: Inknut Antiqua;
 							font-weight: 600;
 						">
-					BOOK NOW
-				</div>
-				<div style="
+						BOOK NOW
+					</div>
+				</a>
+				<a href="booking.html" class="discount-button">
+					<div style="
 							width: 220px;
 							height: 63px;
-							left: 773px;
-							top: 729px;
-							position: absolute;
-							background: #3b593d;
-							border-radius: 31.5px;
-							border: 2px #e2e4d4 solid;
-						"></div>
-				<div style="
-							width: 169px;
-							height: 61px;
-							left: 798px;
-							top: 745px;
-							position: absolute;
+							display: flex;
+							align-items: center;
+							justify-content: center;
 							text-align: center;
 							color: white;
 							font-size: 32px;
 							font-family: IBM Plex Serif;
 							font-weight: 600;
 						">
-					20% OFF
-				</div>
+						20% OFF
+
+					</div>
+				</a>
 				<div
 					style="width: 177px; height: 22px; left: 485px; top: 663px; position: absolute; background: #62845d">
 				</div>

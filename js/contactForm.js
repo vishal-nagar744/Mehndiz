@@ -81,7 +81,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             // Hide the form and show the Thank You message
             document.getElementById('contactForm').style.display = 'none';
             document.getElementById('thankYouMessage').style.display = 'block';
-            notyf.success('Message sent successfully!');
+            notyf.success('Contact Details sent successfully!');
         } else {
             notyf.error('Error sending message.');
         }

@@ -44,6 +44,14 @@
             background-color: #f2a300;
         }
 
+        /* Popup content scrolling */
+        .popup-content {
+            max-height: 80vh;
+            /* Limit max height */
+            overflow-y: auto;
+            /* Scrollable if content exceeds */
+        }
+
         /* Fully responsive design */
         @media (max-width: 640px) {
             .popup-content {
@@ -53,6 +61,11 @@
             .popup-left,
             .popup-right {
                 width: 100%;
+            }
+
+            .popup-content {
+                max-height: 70vh;
+                /* Ensure enough height for scrolling */
             }
         }
     </style>
@@ -119,13 +132,13 @@
                     <!-- Portfolio -->
                     <h3 class="text-lg font-bold text-dark-green">Portfolio</h3>
                     <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 mt-3">
-                        <img src="https://via.placeholder.com/150" alt="Portfolio Image"
+                        <img src="/images/bridal-bangle-mehndi.webp" alt="Portfolio Image"
                             class="w-full h-40 object-cover rounded-lg shadow-md">
-                        <img src="https://via.placeholder.com/150" alt="Portfolio Image"
+                        <img src="/images/Bangle Mehndi .webp" alt="Portfolio Image"
                             class="w-full h-40 object-cover rounded-lg shadow-md">
-                        <img src="https://via.placeholder.com/150" alt="Portfolio Image"
+                        <img src="/images/Asymmetric Floral .webp" alt="Portfolio Image"
                             class="w-full h-40 object-cover rounded-lg shadow-md">
-                        <img src="https://via.placeholder.com/150" alt="Portfolio Image"
+                        <img src="/images/Beautiful palm mehndi .webp" alt="Portfolio Image"
                             class="w-full h-40 object-cover rounded-lg shadow-md">
                     </div>
 

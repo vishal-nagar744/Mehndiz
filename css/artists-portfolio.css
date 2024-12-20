@@ -1,0 +1,171 @@
+
+/* Modal backdrop blur effect */
+.modal-backdrop {
+    backdrop-filter: blur(6px);
+}
+
+.bg-dark-green {
+    background-color: #3b5d50;
+}
+
+.star-filled {
+    color: #f9bf29;
+}
+
+.close-btn {
+    position: absolute;
+    z-index: 1;
+    top: 16px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f9bf29;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+
+.close-btn:hover {
+    background-color: #f2a300;
+}
+
+
+
+.Artist-name {
+    color: rgb(59 93 80 / var(--tw-text-opacity, 1));
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-top: 0.75rem;
+}
+
+.role {
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.about {
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.headings {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.list {
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-left: 1.25rem;
+    list-style-type: disc;
+    margin-top: 0.5rem;
+}
+
+.reviews-disc {
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.contact-details {
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+
+/* Styling for profile section */
+.Artist-Photo {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 9999px;
+    max-width: 100%;
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.star-rating {
+    color: #f9bf29;
+}
+
+ /* Popup content scrolling */
+ .popup-content {
+    max-height: 80vh;
+    /* Limit max height */
+    overflow-y: auto;
+    /* Scrollable if content exceeds */
+}
+
+/* Remove scroll bar width when not needed */
+.modal-dialog {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .popup-content {
+        max-height: 70vh;
+    }
+
+    .modal-dialog {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .popup-left,
+    .popup-right {
+        width: 100%;
+    }
+
+    .portfolio-img {
+        height: auto;
+    }
+}
+
+/* Small Modal Adjustments */
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 5px;
+        font-size: 16px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+}

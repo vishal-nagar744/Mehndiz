@@ -17,6 +17,7 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/message.css" rel="stylesheet" />
     <link href="css/artist-Experts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/artists-portfolio.css">
 
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -96,7 +97,8 @@
                                 <span class="text-warning">★★★★★</span>
                                 <span class="text-muted ms-2">(5/5) - Excellent designs!</span>
                             </div>
-                            <a href="#" class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
+                            <a href="#" data-bs-target="#artistPopup" data-bs-toggle="modal"
+                                class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +120,8 @@
                                 <span class="text-warning">★★★★☆</span>
                                 <span class="text-muted ms-2">(4/5) - Stunning art!</span>
                             </div>
-                            <a href="#" class="btn btn-view-portfolio px-4 px-4 py-2">View Portfolio</a>
+                            <a href="#" data-bs-target="#artistPopup" data-bs-toggle="modal"
+                                class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +143,8 @@
                                 <span class="text-warning">★★★★★</span>
                                 <span class="text-muted ms-2">(5/5) - Highly recommend!</span>
                             </div>
-                            <a href="#" class="btn btn-view-portfolio px-4 px-4 py-2">View Portfolio</a>
+                            <a href="#" data-bs-target="#artistPopup" data-bs-toggle="modal"
+                                class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -162,7 +166,8 @@
                                 <span class="text-warning">★★★★☆</span>
                                 <span class="text-muted ms-2">(4.5/5) - Amazing detail!</span>
                             </div>
-                            <a href="#" class="btn btn-view-portfolio px-4 px-4 py-2">View Portfolio</a>
+                            <a href="#" data-bs-target="#artistPopup" data-bs-toggle="modal"
+                                class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -184,7 +189,8 @@
                                 <span class="text-warning">★★★★★</span>
                                 <span class="text-muted ms-2">(5/5) - Beautiful floral designs!</span>
                             </div>
-                            <a href="#" class="btn btn-view-portfolio px-4 px-4 py-2">View Portfolio</a>
+                            <a href="#" data-bs-target="#artistPopup" data-bs-toggle="modal"
+                                class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +212,8 @@
                                 <span class="text-warning">★★★★☆</span>
                                 <span class="text-muted ms-2">(4/5) - Great modern styles!</span>
                             </div>
-                            <a href="#" class="btn btn-view-portfolio px-4 px-4 py-2">View Portfolio</a>
+                            <a href="#" data-bs-target="#artistPopup" data-bs-toggle="modal"
+                                class="btn btn-view-portfolio px-4 py-2">View Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -215,10 +222,115 @@
         </div>
     </section>
 
+    <!-- Artist Popup Modal start -->
+    <div class="modal fade" id="artistPopup" tabindex="-1" aria-labelledby="artistPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Close Button -->
+                <button onclick="togglePopup(false)" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- Popup Content -->
+                <div class="modal-body popup-content">
+                    <div class="d-flex flex-column flex-md-row">
+                        <!-- Left Section: Profile Info -->
+                        <div class="popup-left col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRmK0xtvw0foX9S6ZVV8ugPZYdluE8X1z0HxKKspuu3s9Ojll4EcWksMsqGnQFw4_5_O8&usqp=CAU"
+                                alt="Artist Photo" class="Artist-Photo">
+                            <h3 class="Artist-name">Aarti Sharma</h3>
+                            <p class="role">Bridal Mehndi Specialist | Professional Artist</p>
+                            <p class="about">
+                                Aarti Sharma is a renowned bridal mehndi artist with a unique approach to intricate
+                                designs. Her work blends traditional and modern patterns, making every occasion
+                                extraordinary. Trusted by over 500 clients nationwide.
+
+
+                            </p>
+
+                            <!-- Certifications and Awards -->
+                            <h5 class="headings">Certifications & Awards</h5>
+                            <ul class="list">
+                                <li>Certified Mehndi Artist - Indian Art Institute</li>
+                                <li>National Bridal Design Award 2023</li>
+                                <li>Featured in "Top 10 Bridal Artists" - Vogue India</li>
+                            </ul>
+
+                            <!-- Collaborations -->
+
+                            <h5 class="headings">Client Collaborations</h5>
+                            <ul class="list">
+                                <li>Worked with celebrity brides in Mumbai and Delhi</li>
+                                <li>Partnered with luxury wedding planners</li>
+                                <li>Customized designs for destination weddings</li>
+                            </ul>
+
+                        </div>
+
+
+
+                        <!-- Right Section: Portfolio, Reviews, Contact -->
+                        <div class="portfolio">
+                            <!-- Portfolio Images -->
+                            <h5 class="headings">Portfolio</h5>
+                            <div class="row g-3">
+                                <div class="col-6 col-lg-3">
+                                    <img src="/images/bridal-bangle-mehndi.webp" alt="Portfolio Image"
+                                        class="img-fluid rounded shadow-sm portfolio-img">
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <img src="/images/Bangle Mehndi .webp" alt="Portfolio Image"
+                                        class="img-fluid rounded shadow-sm portfolio-img">
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <img src="/images/Asymmetric Floral .webp" alt="Portfolio Image"
+                                        class="img-fluid rounded shadow-sm portfolio-img">
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <img src="/images/Beautiful palm mehndi .webp" alt="Portfolio Image"
+                                        class="img-fluid rounded shadow-sm portfolio-img">
+                                </div>
+                            </div>
+
+                            <!-- Client Reviews -->
+                            <div class="mt-4">
+                                <h5 class="headings">Client Reviews</h5>
+                                <div class="mt-3">
+                                    <p><i class="fas fa-star star-filled"></i> <i class="fas fa-star star-filled"></i>
+                                        <i class="fas fa-star star-filled"></i> <i class="fas fa-star star-filled"></i>
+                                        <i class="fas fa-star-half-alt star-filled"></i>
+                                        <span class="reviews-disc">"Her designs are truly mesmerizing. She exceeded all
+                                            my
+                                            expectations!"</span>
+                                    </p>
+                                    <p><i class="fas fa-star star-filled"></i> <i class="fas fa-star star-filled"></i>
+                                        <i class="fas fa-star star-filled"></i> <i class="fas fa-star star-filled"></i>
+                                        <i class="fas fa-star star-filled"></i>
+                                        <span class="reviews-disc">"Amazing attention to detail. Everyone at the wedding
+                                            loved
+                                            it."</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Contact Info -->
+                            <div class="mt-4">
+                                <h5 class="headings">Contact Details</h5>
+                                <p class="contact-details"><strong>Email:</strong> aarti.sharma@mehndi.com</p>
+                                <p class="contact-details"><strong>Phone:</strong> +91 9876543210</p>
+                                <p class="contact-details"><strong>Location:</strong> New Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Artist Popup Modal end -->
 
 
     <!-- Start Footer Section -->
-    <footer class="footer-section">
+    <footer style="margin-top: 2rem;" class="footer-section">
         <div class="container relative">
             <div class="sofa-img">
                 <img src="images/design.webp" alt="Image" class="img-fluid" />

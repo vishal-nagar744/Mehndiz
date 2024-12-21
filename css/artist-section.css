@@ -1,0 +1,169 @@
+.compact-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(145deg, #3b5d50, #202020);
+    /* Dark green to dark gray gradient */
+    border-radius: 10px;
+    margin: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Left Image */
+.image-container {
+    max-width: 50%;
+    animation: floatImage 4s infinite ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border: 4px solid white;
+}
+
+/* Right Content */
+.content {
+    max-width: 45%;
+    position: relative;
+    z-index: 2;
+}
+
+.content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #f9bf29;
+    /* Gold color for text */
+    animation: fadeIn 1s ease forwards;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    /* Light gray text */
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.content .button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #f9bf29, #f78c35);
+    /* Gold gradient for button */
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 2s ease forwards;
+}
+
+.content .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(249, 191, 41, 0.7);
+    /* Hover effect */
+}
+
+/* Animated Circles */
+.background-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(249, 191, 41, 0.1);
+    /* Subtle gold circle effect */
+    border-radius: 50%;
+    z-index: 1;
+    animation: rotateCircle 8s infinite linear;
+}
+
+/* Desktop View: Circles */
+.background-circle:nth-child(1) {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.background-circle:nth-child(2) {
+    bottom: 50px;
+    left: 40%;
+}
+
+.background-circle:nth-child(3) {
+    bottom: -50px;
+    right: 20%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatImage {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .compact-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .image-container {
+        max-width: 93%;
+        margin-bottom: 20px;
+
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .background-circle {
+        display: block;
+        position: absolute;
+        width: 150px;
+        /* Slightly smaller circle for mobile */
+        height: 150px;
+        background: rgba(249, 191, 41, 0.1);
+        /* Subtle gold circle effect */
+        border-radius: 50%;
+        left: 50%;
+        bottom: -80px;
+        /* Position it at the bottom */
+        transform: translateX(-50%);
+        animation: rotateCircle 8s infinite linear;
+    }
+}

@@ -139,31 +139,27 @@
         flex-direction: column;
         text-align: center;
         padding: 30px;
-    }
-
-    .image-container {
-        max-width: 93%;
-        margin-bottom: 20px;
-
-    }
-
-    .content {
+        margin-left: 18px;
+        width: 90%; /* Adjust width for proper fit */
         max-width: 100%;
     }
 
+    .image-container {
+        max-width: 100%; /* Expand image width */
+        margin-bottom: 20px;
+    }
+
+    .content {
+        max-width: 100%; /* Expand content width */
+    }
+
     .background-circle {
-        display: block;
-        position: absolute;
         width: 150px;
         /* Slightly smaller circle for mobile */
         height: 150px;
-        background: rgba(249, 191, 41, 0.1);
-        /* Subtle gold circle effect */
-        border-radius: 50%;
         left: 50%;
         bottom: -80px;
-        /* Position it at the bottom */
+        /* Position at the bottom */
         transform: translateX(-50%);
-        animation: rotateCircle 8s infinite linear;
     }
 }

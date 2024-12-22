@@ -23,6 +23,25 @@ body {
 }
 
 
+
+.booking-form-container{
+    padding: 4%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .booking-form-container {
+        padding: 14% 4% 14% 4%;
+    }
+    
+}
+
+
+
+.footer-section-bookingform{
+    padding: 20px 0 !important;
+}
+
 /* Main Container Styling */
 .form-container {
     background: #f9f9f9;

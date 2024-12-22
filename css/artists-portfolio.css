@@ -1,4 +1,11 @@
 
+.modal-content {
+    overflow: hidden;
+    padding: 0.5rem;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
+
+
 /* Modal backdrop blur effect */
 .modal-backdrop {
     backdrop-filter: blur(6px);

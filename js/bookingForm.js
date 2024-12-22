@@ -173,7 +173,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                     document.getElementById('contactForm').style.display = 'none';
                     document.getElementById('head1').style.display = 'none';
                     document.getElementById('thankYouMessage').style.display = 'block';
-                    notyf.success('Booking successfully!');
+                    notyf.success('Booking Details Send successfully!');
                     document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
                 } else {
                     notyf.error('Error sending message. Please try again.');

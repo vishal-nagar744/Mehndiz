@@ -1,8 +1,8 @@
 Template Name: Furni
-Template Author: hennaix.com
+Template Author: Mehndiz.com
 Template License: https://creativecommons.org/licenses/by/3.0/
-Author URI: https://hennaix.com/
+Author URI: https://Mehndiz.com/
 
 Twitter: https://twitter.com/Untree_co
-Facebook: https://web.facebook.com/hennaix.com/
+Facebook: https://web.facebook.com/Mehndiz.com/
 Pinterest: https://pinterest.com/Untree_co/

@@ -1,7 +1,19 @@
+let isSubmitting = false; // Declare the flag outside the event listener
+
 document
 .getElementById('contactForm')
 .addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
+
+    // Disable the submit button to prevent multiple submissions
+    const submitButton = document.querySelector('.submit-btn');
+    submitButton.disabled = true;
+
+    // Prevent multiple submissions
+    if (isSubmitting) {
+        return;
+    }
+    isSubmitting = true;
 
     // Configure Notyf
     const notyf = new Notyf({
@@ -56,6 +68,8 @@ document
     // Check required fields
     if (!firstName || !lastName || !email || !phone || !eventType || !eventDate || !mehndiType || !guestCount || !designPreference || !locality || !city || !state || !pincode) {
         notyf.error('Please fill in all required fields.');
+        submitButton.disabled = false; // Re-enable the submit button
+        isSubmitting = false; // Reset submission flag
         return;
     }
 
@@ -103,6 +117,8 @@ document
         // Check file size (Telegram's limit is 10 MB)
         if (file.size > 10000000) {
             notyf.error('The selected file is too large. Please choose a file smaller than 10 MB.');
+            submitButton.disabled = false; // Re-enable the submit button
+            isSubmitting = false; // Reset submission flag
             return;
         }
 
@@ -128,11 +144,15 @@ document
                     notyf.success('Booking successfully!');
                 } else {
                     notyf.error('Error sending message. Please try again.');
+                    submitButton.disabled = false; // Re-enable the submit button
+                    isSubmitting = false; // Reset submission flag
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 notyf.error('An error occurred while sending the message.');
+                submitButton.disabled = false; // Re-enable the submit button
+                isSubmitting = false; // Reset submission flag
             });
     } else {
         // Send the message without a photo
@@ -157,11 +177,15 @@ document
                     notyf.success('Message sent successfully!');
                 } else {
                     notyf.error('Error sending message. Please try again.');
+                    submitButton.disabled = false; // Re-enable the submit button
+                    isSubmitting = false; // Reset submission flag
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 notyf.error('An error occurred while sending the message.');
+                submitButton.disabled = false; // Re-enable the submit button
+                isSubmitting = false; // Reset submission flag
             });
     }
 });

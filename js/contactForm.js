@@ -1,5 +1,17 @@
+let isSubmitting = false; // Declare the flag outside the event listener
+
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
+
+    // Disable the submit button to prevent multiple submissions
+    const submitButton = document.querySelector('.btn-primary-hover-outline');
+    submitButton.disabled = true;
+
+    // Prevent multiple submissions
+    if (isSubmitting) {
+        return;
+    }
+    isSubmitting = true;
 
     // Configure Notyf
     const notyf = new Notyf({
@@ -40,26 +52,27 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     const phone = document.getElementById('phone').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    // Validation: Check if any field is empty
+    // Check required fields
     if (!firstName || !lastName || !email || !phone || !message) {
-        notyf.error('Please fill in all fields before submitting the form.');
-        return; // Stop further execution
+        notyf.error('Please fill in all required fields.');
+        submitButton.disabled = false; // Re-enable the submit button
+        isSubmitting = false; // Reset submission flag
+        return;
     }
-
-    // Get current date and time
-    const now = new Date();
-    const dateTime = now.toLocaleString();
 
     // Prepare the message text
     let messageText = `
-*🌟Contact Form Details 🌟*
+*🌟 New Contact Request 🌟*
 
-*${dateTime}* 
 ━━━━━━━━━━━━━━━━━━━━━
+*🔹 Basic Information*
 - *First Name:* ${firstName}
 - *Last Name:* ${lastName}
 - *Email:* ${email}
-- *Phone No:* ${phone}
+- *Phone:* ${phone}
+━━━━━━━━━━━━━━━━━━━━━
+
+*🔹 Message*
 - *Message:* ${message}
 `;
 
@@ -75,19 +88,23 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             parse_mode: 'Markdown',
         }),
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.ok) {
-            // Hide the form and show the Thank You message
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('thankYouMessage').style.display = 'block';
-            notyf.success('Contact Details sent successfully!');
-        } else {
-            notyf.error('Error sending message.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        notyf.error('An error occurred while sending the message.');
-    });
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                // On successful submission
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('thankYouMessage').style.display = 'block';
+                notyf.success('Message sent successfully!');
+            } else {
+                notyf.error('Error sending message. Please try again.');
+                submitButton.disabled = false; // Re-enable the submit button
+                isSubmitting = false; // Reset submission flag
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            notyf.error('An error occurred while sending the message.');
+            submitButton.disabled = false; // Re-enable the submit button
+            isSubmitting = false; // Reset submission flag
+        });
 });

@@ -1,8 +1,6 @@
 let isSubmitting = false; // Declare the flag outside the event listener
 
-document
-.getElementById('contactForm')
-.addEventListener('submit', function (event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
     // Disable the submit button to prevent multiple submissions
@@ -142,6 +140,7 @@ document
                     document.getElementById('head1').style.display = 'none';
                     document.getElementById('thankYouMessage').style.display = 'block';
                     notyf.success('Booking successfully!');
+                    document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
                 } else {
                     notyf.error('Error sending message. Please try again.');
                     submitButton.disabled = false; // Re-enable the submit button
@@ -175,6 +174,7 @@ document
                     document.getElementById('head1').style.display = 'none';
                     document.getElementById('thankYouMessage').style.display = 'block';
                     notyf.success('Booking successfully!');
+                    document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
                 } else {
                     notyf.error('Error sending message. Please try again.');
                     submitButton.disabled = false; // Re-enable the submit button

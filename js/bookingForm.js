@@ -174,7 +174,7 @@ document
                     document.getElementById('contactForm').style.display = 'none';
                     document.getElementById('head1').style.display = 'none';
                     document.getElementById('thankYouMessage').style.display = 'block';
-                    notyf.success('Message sent successfully!');
+                    notyf.success('Booking successfully!');
                 } else {
                     notyf.error('Error sending message. Please try again.');
                     submitButton.disabled = false; // Re-enable the submit button
